@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Sinks;
 
+@RequestMapping("/notice")
 @RestController
 public class NoticeController {
 

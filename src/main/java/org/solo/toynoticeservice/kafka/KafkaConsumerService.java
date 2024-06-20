@@ -20,7 +20,7 @@ public class KafkaConsumerService {
         this.noticeRepository = noticeRepository;
     }
 
-    @KafkaListener(topics = {"comment-add-events", "report-my-board-events", "my-report-success-events"}, groupId = "notice")
+    @KafkaListener(topics = {"comment-add-events", "report-my-board-events"}, groupId = "notice")
     public void listenNotice(String message){
         NoticeEntity noticeEntity = new NoticeEntity();
         noticeEntity.setUsername(message.split("::")[0]);
